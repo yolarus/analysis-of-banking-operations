@@ -80,3 +80,20 @@ def get_exchange_rates(currencies: list[str]) -> list[dict]:
         currency_dict["rate"] = round(response.json()["result"], 2)
         currencies_list.append(currency_dict)
     return currencies_list
+
+
+def get_stock_rates(stock_list: list[str]) -> list[dict]:
+    """
+    Получение цен акций по списку кодов
+    """
+    api_key_financial_modeling_prep = os.getenv("API_KEY_FINANCIAL_MODELING_PREP")
+    url = f"https://financialmodelingprep.com/api/v3/stock/list?apikey={api_key_financial_modeling_prep}"
+    response = requests.get(url)
+    stock_prices = []
+    for share in response.json():
+        stock_dict = {}
+        if share["symbol"] in stock_list:
+            stock_dict["stock"] = share["symbol"]
+            stock_dict["price"] = round(share["price"], 2)
+            stock_prices.append(stock_dict)
+    return stock_prices
