@@ -26,14 +26,11 @@ def main(user_date: str) -> str:
         greeting = "Добрый вечер"
 
     operations = get_data_filter_by_date("operations.xlsx", end_date)
-
     cards_list = get_cards_info(operations)
-
     top_operations_list = get_top_transactions(operations)
-
-    currencies_list = get_exchange_rates(["USD", "EUR"])
-
-    stock_prices = get_stock_rates(["AAPL", "AMZN", "GOOGL", "MSFT", "TSLA"])
+    user_settings = open_user_settings()
+    currencies_list = get_exchange_rates(user_settings["user_currencies"])
+    stock_prices = get_stock_rates(user_settings["user_stocks"])
 
     result_dict = {"greeting": greeting,
                    "cards": cards_list,
@@ -65,11 +62,14 @@ def get_cards_info(operations: pd.DataFrame) -> list[dict]:
     fieldnames = ["last_digits", "total_spent", "cashback"]
     card_numbers = expenses_group_cards.index.tolist()
     cards_list = []
+    card_dict = {}
+    counter = 0
     for row in expenses_group_cards.iterrows():
-        card_dict = {"last_digits": card_num[-4:] for card_num in card_numbers}
+        card_dict[fieldnames[0]] = card_numbers[counter][-4:]
         for i, element in enumerate(row[1], 1):
             card_dict[fieldnames[i]] = element
-        cards_list.append(card_dict)
+        cards_list.append(card_dict.copy())
+        counter += 1
 
     for card in cards_list:
         card["total_spent"] *= -1
@@ -132,3 +132,9 @@ def get_stock_rates(stock_list: list[str]) -> list[dict]:
             stock_dict["price"] = round(share["price"], 2)
             stock_prices.append(stock_dict)
     return stock_prices
+
+
+def open_user_settings() -> dict:
+    with open("user_settings.json", "r") as file:
+        result = json.load(file)
+    return result
