@@ -9,6 +9,41 @@ from dotenv import load_dotenv
 load_dotenv(".env")
 
 
+def main(user_date: str) -> str:
+    """
+    Функция принимает строку с датой  и временем в формате YYYY-MM-DD HH:MM:SS и возвращает JSON-ответ
+    """
+    end_date = datetime.datetime.strptime(user_date, "%Y-%m-%d %H:%M:%S")
+
+    # Определяем время суток
+    if 0 <= end_date.hour < 6:
+        greeting = "Доброй ночи"
+    elif 6 <= end_date.hour < 12:
+        greeting = "Доброе утро"
+    elif 12 <= end_date.hour < 18:
+        greeting = "Добрый день"
+    else:
+        greeting = "Добрый вечер"
+
+    operations = get_data_filter_by_date("operations.xlsx", end_date)
+
+    cards_list = get_cards_info(operations)
+
+    top_operations_list = get_top_transactions(operations)
+
+    currencies_list = get_exchange_rates(["USD", "EUR"])
+
+    stock_prices = get_stock_rates(["AAPL", "AMZN", "GOOGL", "MSFT", "TSLA"])
+
+    result_dict = {"greeting": greeting,
+                   "cards": cards_list,
+                   "top_transactions": top_operations_list,
+                   "currency_rates": currencies_list,
+                   "stock_prices": stock_prices}
+
+    return json.dumps(result_dict, ensure_ascii=False)
+
+
 def get_data_filter_by_date(file_name: str, end_date: datetime.datetime) -> pd.DataFrame:
     """
     Считывание данных и фильтрация по дате
