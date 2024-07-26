@@ -40,3 +40,26 @@ def get_cards_info(operations: pd.DataFrame) -> list[dict]:
         card["total_spent"] *= -1
         card["total_spent"] = round(card["total_spent"], 2)
     return cards_list
+
+
+def get_top_transactions(operations: pd.DataFrame) -> list[dict]:
+    """
+    Топ 5 по сумме платежа
+    """
+    operations_with_fabs = operations
+    operations_with_fabs["Сумма операции по модулю"] = operations["Сумма операции"].apply(math.fabs)
+    sorted_operations_by_amount = operations_with_fabs.sort_values(by="Сумма операции по модулю", ascending=False)
+    fieldnames = ["date", "amount", "category", "description"]
+    top_operations_list = []
+    counter = 0
+    for row in sorted_operations_by_amount.loc[:, ["Дата операции",
+                                                   "Сумма операции",
+                                                   "Категория",
+                                                   "Описание"]].iterrows():
+        operation_dict = {}
+        for i, element in enumerate(row[1]):
+            operation_dict[fieldnames[i]] = element
+        top_operations_list.append(operation_dict)
+        counter += 1
+        if counter == 5:
+            return top_operations_list
