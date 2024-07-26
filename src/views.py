@@ -63,3 +63,20 @@ def get_top_transactions(operations: pd.DataFrame) -> list[dict]:
         counter += 1
         if counter == 5:
             return top_operations_list
+
+
+def get_exchange_rates(currencies: list[str]) -> list[dict]:
+    """
+    Получение курсов валют по списку кодов
+    """
+    api_key_exchange_rates_data = os.getenv("API_KEY_EXCHANGE_RATES_DATA")
+    headers = {"apikey": api_key_exchange_rates_data}
+    currencies_list = []
+    for currency in currencies:
+        currency_dict = {}
+        url = f"https://api.apilayer.com/exchangerates_data/convert?to={'RUB'}&from={currency}&amount={1}"
+        response = requests.get(url, headers=headers)
+        currency_dict["currency"] = currency
+        currency_dict["rate"] = round(response.json()["result"], 2)
+        currencies_list.append(currency_dict)
+    return currencies_list
