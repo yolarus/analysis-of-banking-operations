@@ -56,9 +56,6 @@ def spending_by_category(transactions: pd.DataFrame,
     else:
         start_date = end_date.replace(month=end_date.month - 3)
 
-    print(start_date)
-    print(end_date)
-
     df_date = pd.to_datetime(transactions["Дата операции"], format="%d.%m.%Y %H:%M:%S")
     transactions = transactions[(start_date <= df_date) & (df_date <= end_date)]
     transactions = transactions[transactions["Категория"] == category]
