@@ -1,3 +1,5 @@
+import os.path
+
 import pandas as pd
 import datetime
 import json
@@ -7,17 +9,37 @@ from typing import Optional, Callable
 
 
 def out_to_json_file(func: Callable) -> Callable:
+    """
+    Запись датафрейма в файл records.json в JSON формате
+    """
     @wraps(func)
-    def wrapper(*args: list, **kwargs: list) -> str:
+    def wrapper(*args: list, **kwargs: list) -> pd.DataFrame:
         result = func(*args, **kwargs)
         wrapper_result = result.to_dict("records")
         wrapper_result = json.dumps(wrapper_result, indent=4, ensure_ascii=False)
-        with open("reports/spending_by_category.json", "w") as file:
+        with open("reports/report.json", "w") as file:
             file.write(wrapper_result)
         return result
     return wrapper
 
 
+def out_to_user_file(file_name: str) -> Callable:
+    """
+    Запись датафрейма в пользовательский файл в CSV формате
+    """
+    def decorator(func: Callable) -> Callable:
+        @wraps(func)
+        def wrapper(*args: list, **kwargs: list) -> pd.DataFrame:
+            result = func(*args, **kwargs)
+            with open(os.path.join("reports/", file_name), "w") as file:
+                file.write(result.to_csv())
+            return result
+
+        return wrapper
+    return decorator
+
+
+@out_to_user_file(file_name="spending_by_category.txt")
 @out_to_json_file
 def spending_by_category(transactions: pd.DataFrame,
                          category: str,
