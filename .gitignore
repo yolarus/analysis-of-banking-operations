@@ -57,8 +57,9 @@ cover/
 
 # Django stuff:
 *.log
-!src.masks.log
-!src.utils.log
+!src.reports.log
+!src.services.log
+!project.log
 local_settings.py
 db.sqlite3
 db.sqlite3-journal

@@ -1,0 +1,6 @@
+29.07.2024 00:38:45 - src.services - services.py - increase_cashback - INFO - Начало работы сервиса
+29.07.2024 00:38:45 - src.services - services.py - increase_cashback - INFO - Определение начальной даты
+29.07.2024 00:38:45 - src.services - services.py - increase_cashback - INFO - Фильтрация данных по дате и выплате кэшбэка
+29.07.2024 00:38:45 - src.services - services.py - increase_cashback - INFO - Группировка данных по категориям
+29.07.2024 00:38:45 - src.services - services.py - increase_cashback - INFO - Конвертация данных
+29.07.2024 00:38:45 - src.services - services.py - increase_cashback - INFO - Конец работы сервиса

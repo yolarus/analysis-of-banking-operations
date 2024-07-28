@@ -1,0 +1,23 @@
+29.07.2024 00:28:57 - src.views - views.py - main - INFO - Начало работы
+29.07.2024 00:28:57 - src.views - views.py - main - INFO - Приветствие
+29.07.2024 00:28:57 - src.utils - utils.py - greetings - INFO - Начало работы функции greetings
+29.07.2024 00:28:57 - src.utils - utils.py - greetings - INFO - Конец работы функции greetings
+29.07.2024 00:28:57 - src.views - views.py - main - INFO - Получение данных
+29.07.2024 00:28:57 - src.utils - utils.py - get_data_filter_by_date - INFO - Начало работы функции get_data_filter_by_date
+29.07.2024 00:28:58 - src.utils - utils.py - get_data_filter_by_date - INFO - Конец работы функции get_data_filter_by_date
+29.07.2024 00:28:58 - src.views - views.py - main - INFO - Получение статистики по картам
+29.07.2024 00:28:58 - src.utils - utils.py - get_cards_info - INFO - Начало работы функции get_cards_info
+29.07.2024 00:28:58 - src.utils - utils.py - get_cards_info - INFO - Конец работы функции get_cards_info
+29.07.2024 00:28:58 - src.views - views.py - main - INFO - Получение топ транзаций
+29.07.2024 00:28:58 - src.utils - utils.py - get_top_transactions - INFO - Начало работы функции get_top_transactions
+29.07.2024 00:28:58 - src.utils - utils.py - get_top_transactions - INFO - Конец работы функции get_top_transactions
+29.07.2024 00:28:58 - src.views - views.py - main - INFO - Получение пользовательских настроек
+29.07.2024 00:28:58 - src.utils - utils.py - open_user_settings - INFO - Начало работы функции open_user_settings
+29.07.2024 00:28:58 - src.utils - utils.py - open_user_settings - INFO - Конец работы функции open_user_settings
+29.07.2024 00:28:58 - src.views - views.py - main - INFO - Получение данных курса валют
+29.07.2024 00:28:58 - src.utils - utils.py - get_exchange_rates - INFO - Начало работы функции get_exchange_rates
+29.07.2024 00:28:59 - src.utils - utils.py - get_exchange_rates - INFO - Конец работы функции get_exchange_rates
+29.07.2024 00:28:59 - src.views - views.py - main - INFO - Получение данных курса акций
+29.07.2024 00:28:59 - src.utils - utils.py - get_stock_rates - INFO - Начало работы функции get_stock_rates
+29.07.2024 00:29:02 - src.utils - utils.py - get_stock_rates - INFO - Конец работы функции get_stock_rates
+29.07.2024 00:29:02 - src.views - views.py - main - INFO - Конец работы
