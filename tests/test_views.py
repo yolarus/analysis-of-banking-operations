@@ -1,7 +1,9 @@
-import src.views
-from unittest.mock import patch
 from typing import Any
+from unittest.mock import patch
+
 import pandas as pd
+
+import src.views
 
 
 @patch("src.views.get_exchange_rates")
@@ -9,7 +11,7 @@ import pandas as pd
 @patch("src.views.open_user_settings")
 @patch("src.views.get_data_filter_by_date")
 def test_main(mock_data: Any, mock_settings: Any, mock_stock: Any, mock_exchange: Any,
-              res_main: str, res_get_data_filter_by_date: pd.DataFrame):
+              res_main: str, res_get_data_filter_by_date: pd.DataFrame) -> None:
     mock_data.return_value = res_get_data_filter_by_date
     mock_settings.return_value = {"user_currencies": ["USER"],
                                   "user_stocks": ["USER"]}

@@ -1,9 +1,11 @@
-import pandas as pd
-import math
-import requests
-import os
 import datetime
 import json
+import math
+import os
+from typing import Any
+
+import pandas as pd
+import requests
 from dotenv import load_dotenv
 
 load_dotenv(".env")
@@ -103,7 +105,7 @@ def get_stock_rates(stock_list: list[str]) -> list[dict]:
     return stock_prices
 
 
-def open_user_settings() -> dict:
+def open_user_settings() -> Any:
     """
     Возвращает настройки из файла user_settings.json
     """

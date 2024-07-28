@@ -1,10 +1,12 @@
-from src.utils import (get_data_filter_by_date, get_cards_info, get_top_transactions,
-                       get_exchange_rates, get_stock_rates, open_user_settings, greetings)
-from unittest.mock import patch, mock_open
-import pandas as pd
 import datetime
 from typing import Any
-import requests
+from unittest.mock import mock_open, patch
+
+import pandas as pd
+
+from src.utils import (get_cards_info, get_data_filter_by_date, get_exchange_rates, get_stock_rates,
+                       get_top_transactions, greetings, open_user_settings)
+
 
 @patch("pandas.read_excel")
 def test_get_data_filter_by_date(mock_df: Any, transactions_df: pd.DataFrame,
@@ -27,20 +29,20 @@ def test_get_top_transactions(transactions_df: pd.DataFrame, top_transactions: l
 
 
 @patch("requests.get")
-def test_get_exchange_rates(mock_get: Any):
+def test_get_exchange_rates(mock_get: Any) -> None:
     mock_get.return_value.json.return_value = {"result": 100}
     assert get_exchange_rates(["USER"]) == [{'currency': 'USER', 'rate': 100}]
     mock_get.assert_called_once()
 
 
 @patch("requests.get")
-def test_get_stock_rates(mock_get: Any):
+def test_get_stock_rates(mock_get: Any) -> None:
     mock_get.return_value.json.return_value = [{"symbol": "USER", "price": 100}]
     assert get_stock_rates(["USER"]) == [{'stock': 'USER', 'price': 100}]
     mock_get.assert_called_once()
 
 
-def test_open_user_settings():
+def test_open_user_settings() -> None:
     data = """{"user_currencies": ["USD", "EUR"], "user_stocks": ["AAPL", "AMZN", "GOOGL", "MSFT", "TSLA"]}"""
     with patch("builtins.open", mock_open(read_data=data)) as mock_file:
         assert open_user_settings() == {"user_currencies": ["USD", "EUR"],

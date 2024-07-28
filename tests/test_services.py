@@ -1,5 +1,6 @@
-from src.services import increase_cashback
 import pandas as pd
+
+from src.services import increase_cashback
 
 
 def test_increase_cashback_12(transactions_df: pd.DataFrame, cashback_12: str) -> None:

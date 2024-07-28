@@ -1,6 +1,7 @@
-import pytest
 import json
+
 import pandas as pd
+import pytest
 
 
 @pytest.fixture
@@ -108,12 +109,12 @@ def top_transactions() -> list[dict]:
 
 @pytest.fixture()
 def res_main() -> str:
-    top =[{"date": "30.12.2021 16:44:00", "amount": -4, "category": "Супермаркеты", "description": "Операция 4"},
-          {"date": "30.12.2021 16:44:00", "amount": -3, "category": "Рестораны", "description": "Операция 3"},
-          {"date": "30.12.2021 16:44:00", "amount": -2, "category": "Одежда", "description": "Операция 2"},
-          {"date": "31.12.2021 16:44:00", "amount": -1, "category": "Супермаркеты", "description": "Операция 1"}]
+    top = [{"date": "30.12.2021 16:44:00", "amount": -4, "category": "Супермаркеты", "description": "Операция 4"},
+           {"date": "30.12.2021 16:44:00", "amount": -3, "category": "Рестораны", "description": "Операция 3"},
+           {"date": "30.12.2021 16:44:00", "amount": -2, "category": "Одежда", "description": "Операция 2"},
+           {"date": "31.12.2021 16:44:00", "amount": -1, "category": "Супермаркеты", "description": "Операция 1"}]
     cards = [{"last_digits": "1111", "total_spent": 3, "cashback": 30},
-            {"last_digits": "2222", "total_spent": 7, "cashback": 30}]
+             {"last_digits": "2222", "total_spent": 7, "cashback": 30}]
     data = {"greeting": "Добрый день",
             "cards": cards,
             "top_transactions": top,

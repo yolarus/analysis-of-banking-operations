@@ -1,8 +1,8 @@
 import datetime
 import json
 
-from src.utils import (open_user_settings, get_data_filter_by_date, get_cards_info,
-                       get_top_transactions, get_stock_rates, get_exchange_rates, greetings)
+from src.utils import (get_cards_info, get_data_filter_by_date, get_exchange_rates, get_stock_rates,
+                       get_top_transactions, greetings, open_user_settings)
 
 
 def main(user_date: str) -> str:

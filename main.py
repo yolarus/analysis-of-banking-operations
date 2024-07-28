@@ -1,8 +1,8 @@
 import pandas as pd
 
-from src.views import main
-from src.services import increase_cashback
 from src.reports import spending_by_category
+from src.services import increase_cashback
+from src.views import main
 
 if __name__ == "__main__":
     print(main("2021-12-31 16:44:00"))

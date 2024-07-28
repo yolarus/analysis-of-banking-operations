@@ -1,11 +1,10 @@
-import os.path
-
-import pandas as pd
 import datetime
 import json
+import os.path
 from functools import wraps
+from typing import Any, Callable, Optional
 
-from typing import Optional, Callable
+import pandas as pd
 
 
 def out_to_json_file(func: Callable) -> Callable:
@@ -13,7 +12,7 @@ def out_to_json_file(func: Callable) -> Callable:
     Запись датафрейма в файл records.json в JSON формате
     """
     @wraps(func)
-    def wrapper(*args: list, **kwargs: list) -> pd.DataFrame:
+    def wrapper(*args: list, **kwargs: list) -> Any:
         result = func(*args, **kwargs)
         wrapper_result = result.to_dict("records")
         wrapper_result = json.dumps(wrapper_result, indent=4, ensure_ascii=False)
@@ -29,7 +28,7 @@ def out_to_user_file(file_name: str) -> Callable:
     """
     def decorator(func: Callable) -> Callable:
         @wraps(func)
-        def wrapper(*args: list, **kwargs: list) -> pd.DataFrame:
+        def wrapper(*args: list, **kwargs: list) -> Any:
             result = func(*args, **kwargs)
             wrapper_result = result.to_csv()
             with open(os.path.join("reports/", file_name), "w") as file:
@@ -60,5 +59,5 @@ def spending_by_category(transactions: pd.DataFrame,
     df_date = pd.to_datetime(transactions["Дата операции"], format="%d.%m.%Y %H:%M:%S")
     transactions = transactions[(start_date <= df_date) & (df_date <= end_date)]
     transactions = transactions[transactions["Категория"] == category]
-    expenses = transactions[transactions["Сумма операции"] < 0]
+    expenses = pd.DataFrame(transactions[transactions["Сумма операции"] < 0])
     return expenses
