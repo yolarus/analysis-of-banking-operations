@@ -2,7 +2,7 @@ import datetime
 import json
 
 from src.utils import (open_user_settings, get_data_filter_by_date, get_cards_info,
-                   get_top_transactions, get_stock_rates, get_exchange_rates)
+                       get_top_transactions, get_stock_rates, get_exchange_rates, greetings)
 
 
 def main(user_date: str) -> str:
@@ -11,15 +11,7 @@ def main(user_date: str) -> str:
     """
     end_date = datetime.datetime.strptime(user_date, "%Y-%m-%d %H:%M:%S")
 
-    # Определяем время суток
-    if 0 <= end_date.hour < 6:
-        greeting = "Доброй ночи"
-    elif 6 <= end_date.hour < 12:
-        greeting = "Доброе утро"
-    elif 12 <= end_date.hour < 18:
-        greeting = "Добрый день"
-    else:
-        greeting = "Добрый вечер"
+    greeting = greetings(end_date)
 
     operations = get_data_filter_by_date("operations.xlsx", end_date)
     cards_list = get_cards_info(operations)

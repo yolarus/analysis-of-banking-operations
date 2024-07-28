@@ -31,8 +31,9 @@ def out_to_user_file(file_name: str) -> Callable:
         @wraps(func)
         def wrapper(*args: list, **kwargs: list) -> pd.DataFrame:
             result = func(*args, **kwargs)
+            wrapper_result = result.to_csv()
             with open(os.path.join("reports/", file_name), "w") as file:
-                file.write(result.to_csv())
+                file.write(wrapper_result)
             return result
 
         return wrapper

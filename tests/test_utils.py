@@ -1,5 +1,5 @@
 from src.utils import (get_data_filter_by_date, get_cards_info, get_top_transactions,
-                       get_exchange_rates, get_stock_rates, open_user_settings)
+                       get_exchange_rates, get_stock_rates, open_user_settings, greetings)
 from unittest.mock import patch, mock_open
 import pandas as pd
 import datetime
@@ -21,9 +21,9 @@ def test_get_cards_info(transactions_df: pd.DataFrame) -> None:
                       {"last_digits": "3333", "total_spent": 11, "cashback": 90}]
 
 
-def test_get_top_transactions(transactions_df: pd.DataFrame, top_transactions_df: list[dict]) -> None:
+def test_get_top_transactions(transactions_df: pd.DataFrame, top_transactions: list[dict]) -> None:
     result = get_top_transactions(transactions_df)
-    assert result == top_transactions_df
+    assert result == top_transactions
 
 
 @patch("requests.get")
@@ -45,3 +45,24 @@ def test_open_user_settings():
     with patch("builtins.open", mock_open(read_data=data)) as mock_file:
         assert open_user_settings() == {"user_currencies": ["USD", "EUR"],
                                         "user_stocks": ["AAPL", "AMZN", "GOOGL", "MSFT", "TSLA"]}
+        mock_file.assert_called_once()
+
+
+def test_greetings_morning() -> None:
+    date = datetime.datetime.strptime("31.12.2021 06:44:00", "%d.%m.%Y %H:%M:%S")
+    assert greetings(date) == "Доброе утро"
+
+
+def test_greetings_day() -> None:
+    date = datetime.datetime.strptime("31.12.2021 12:44:00", "%d.%m.%Y %H:%M:%S")
+    assert greetings(date) == "Добрый день"
+
+
+def test_greetings_evening() -> None:
+    date = datetime.datetime.strptime("31.12.2021 18:44:00", "%d.%m.%Y %H:%M:%S")
+    assert greetings(date) == "Добрый вечер"
+
+
+def test_greetings_night() -> None:
+    date = datetime.datetime.strptime("31.12.2021 00:44:00", "%d.%m.%Y %H:%M:%S")
+    assert greetings(date) == "Доброй ночи"

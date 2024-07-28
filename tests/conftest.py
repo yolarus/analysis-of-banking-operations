@@ -1,5 +1,5 @@
 import pytest
-
+import json
 import pandas as pd
 
 
@@ -97,10 +97,27 @@ def res_get_data_filter_by_date() -> pd.DataFrame:
 
 
 @pytest.fixture()
-def top_transactions_df() -> list[dict]:
+def top_transactions() -> list[dict]:
     data = [{"date": "27.07.2024 16:44:00", "amount": -6, "category": "Супермаркеты", "description": "Операция 6"},
             {"date": "29.11.2021 16:44:00", "amount": -5, "category": "Супермаркеты", "description": "Операция 5"},
             {"date": "30.12.2021 16:44:00", "amount": -4, "category": "Супермаркеты", "description": "Операция 4"},
             {"date": "30.12.2021 16:44:00", "amount": -3, "category": "Рестораны", "description": "Операция 3"},
             {"date": "30.12.2021 16:44:00", "amount": -2, "category": "Одежда", "description": "Операция 2"}]
     return data
+
+
+@pytest.fixture()
+def res_main() -> str:
+    top =[{"date": "30.12.2021 16:44:00", "amount": -4, "category": "Супермаркеты", "description": "Операция 4"},
+          {"date": "30.12.2021 16:44:00", "amount": -3, "category": "Рестораны", "description": "Операция 3"},
+          {"date": "30.12.2021 16:44:00", "amount": -2, "category": "Одежда", "description": "Операция 2"},
+          {"date": "31.12.2021 16:44:00", "amount": -1, "category": "Супермаркеты", "description": "Операция 1"}]
+    cards = [{"last_digits": "1111", "total_spent": 3, "cashback": 30},
+            {"last_digits": "2222", "total_spent": 7, "cashback": 30}]
+    data = {"greeting": "Добрый день",
+            "cards": cards,
+            "top_transactions": top,
+            "currency_rates": [{'currency': 'USER', 'rate': 100}],
+            "stock_prices": [{'stock': 'USER', 'price': 100}]}
+    result = json.dumps(data, ensure_ascii=False)
+    return result

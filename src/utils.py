@@ -65,7 +65,8 @@ def get_top_transactions(operations: pd.DataFrame) -> list[dict]:
         top_operations_list.append(operation_dict)
         counter += 1
         if counter == 5:
-            return top_operations_list
+            break
+    return top_operations_list
 
 
 def get_exchange_rates(currencies: list[str]) -> list[dict]:
@@ -109,3 +110,18 @@ def open_user_settings() -> dict:
     with open("user_settings.json", "r") as file:
         result = json.load(file)
     return result
+
+
+def greetings(end_date: datetime.datetime) -> str:
+    """
+    Функция определяет время суток
+    """
+    if 0 <= end_date.hour < 6:
+        greeting = "Доброй ночи"
+    elif 6 <= end_date.hour < 12:
+        greeting = "Доброе утро"
+    elif 12 <= end_date.hour < 18:
+        greeting = "Добрый день"
+    else:
+        greeting = "Добрый вечер"
+    return greeting
