@@ -3,6 +3,7 @@ from typing import Any
 from unittest.mock import mock_open, patch
 
 import pandas as pd
+import pytest
 
 from src.utils import (get_cards_info, get_data_filter_by_date, get_exchange_rates, get_stock_rates,
                        get_top_transactions, greetings, open_user_settings)
@@ -50,21 +51,10 @@ def test_open_user_settings() -> None:
         mock_file.assert_called_once()
 
 
-def test_greetings_morning() -> None:
-    date = datetime.datetime.strptime("31.12.2021 06:44:00", "%d.%m.%Y %H:%M:%S")
-    assert greetings(date) == "Доброе утро"
-
-
-def test_greetings_day() -> None:
-    date = datetime.datetime.strptime("31.12.2021 12:44:00", "%d.%m.%Y %H:%M:%S")
-    assert greetings(date) == "Добрый день"
-
-
-def test_greetings_evening() -> None:
-    date = datetime.datetime.strptime("31.12.2021 18:44:00", "%d.%m.%Y %H:%M:%S")
-    assert greetings(date) == "Добрый вечер"
-
-
-def test_greetings_night() -> None:
-    date = datetime.datetime.strptime("31.12.2021 00:44:00", "%d.%m.%Y %H:%M:%S")
-    assert greetings(date) == "Доброй ночи"
+@pytest.mark.parametrize("user_date, result", [("31.12.2021 06:44:00", "Доброе утро"),
+                                               ("31.12.2021 12:44:00", "Добрый день"),
+                                               ("31.12.2021 18:44:00", "Добрый вечер"),
+                                               ("31.12.2021 00:44:00", "Доброй ночи")])
+def test_greetings_morning(user_date: str, result: str) -> None:
+    date = datetime.datetime.strptime(user_date, "%d.%m.%Y %H:%M:%S")
+    assert greetings(date) == result
