@@ -1,0 +1,12 @@
+23.01.2025 18:37:36 - src.services - services.py - increase_cashback - INFO - Начало работы сервиса
+23.01.2025 18:37:36 - src.services - services.py - increase_cashback - INFO - Определение начальной даты
+23.01.2025 18:37:36 - src.services - services.py - increase_cashback - INFO - Фильтрация данных по дате и выплате кэшбэка
+23.01.2025 18:37:36 - src.services - services.py - increase_cashback - INFO - Группировка данных по категориям
+23.01.2025 18:37:36 - src.services - services.py - increase_cashback - INFO - Конвертация данных
+23.01.2025 18:37:36 - src.services - services.py - increase_cashback - INFO - Конец работы сервиса
+23.01.2025 18:37:36 - src.services - services.py - increase_cashback - INFO - Начало работы сервиса
+23.01.2025 18:37:36 - src.services - services.py - increase_cashback - INFO - Определение начальной даты
+23.01.2025 18:37:36 - src.services - services.py - increase_cashback - INFO - Фильтрация данных по дате и выплате кэшбэка
+23.01.2025 18:37:36 - src.services - services.py - increase_cashback - INFO - Группировка данных по категориям
+23.01.2025 18:37:36 - src.services - services.py - increase_cashback - INFO - Конвертация данных
+23.01.2025 18:37:36 - src.services - services.py - increase_cashback - INFO - Конец работы сервиса
