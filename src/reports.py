@@ -57,7 +57,13 @@ def out_to_user_file(file_name: str) -> Callable:
 def spending_by_category(transactions: pd.DataFrame,
                          category: str,
                          date: Optional[str] = None) -> pd.DataFrame:
-    """ Опицонально принимает дату в формате ГГГГ.ММ.ДД"""
+    """
+    Выгрузка трат по категории за 3 месяца от указанной даты
+    :param transactions: Датафрейм с исходными данными
+    :param category: Категория для поиска
+    :param date: Дата для поиска, по умолчанию текущая дата
+    :return: Датафрейм с тратами по категории
+    """
     reports_logger.info("Начало формирования отчета")
     reports_logger.info("Определение конечной даты")
     if date:

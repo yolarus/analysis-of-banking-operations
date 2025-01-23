@@ -1,8 +1,14 @@
-29.07.2024 00:38:45 - src.reports - reports.py - spending_by_category - INFO - Начало формирования отчета
-29.07.2024 00:38:45 - src.reports - reports.py - spending_by_category - INFO - Определение конечной даты
-29.07.2024 00:38:45 - src.reports - reports.py - spending_by_category - INFO - Определение начальной даты
-29.07.2024 00:38:45 - src.reports - reports.py - spending_by_category - INFO - Фильтрация данных по дате
-29.07.2024 00:38:45 - src.reports - reports.py - spending_by_category - INFO - Фильтрация данных по категории
-29.07.2024 00:38:45 - src.reports - reports.py - spending_by_category - INFO - Конец формирования отчета
-29.07.2024 00:38:45 - src.reports - reports.py - wrapper - INFO - Выгрузка отчета в файл report.json
-29.07.2024 00:38:45 - src.reports - reports.py - wrapper - INFO - Выгрузка отчета в файл spending_by_category.txt
+23.01.2025 18:37:36 - src.reports - reports.py - spending_by_category - INFO - Начало формирования отчета
+23.01.2025 18:37:36 - src.reports - reports.py - spending_by_category - INFO - Определение конечной даты
+23.01.2025 18:37:36 - src.reports - reports.py - spending_by_category - INFO - Определение начальной даты
+23.01.2025 18:37:36 - src.reports - reports.py - spending_by_category - INFO - Фильтрация данных по дате
+23.01.2025 18:37:36 - src.reports - reports.py - spending_by_category - INFO - Фильтрация данных по категории
+23.01.2025 18:37:36 - src.reports - reports.py - spending_by_category - INFO - Конец формирования отчета
+23.01.2025 18:37:36 - src.reports - reports.py - spending_by_category - INFO - Начало формирования отчета
+23.01.2025 18:37:36 - src.reports - reports.py - spending_by_category - INFO - Определение конечной даты
+23.01.2025 18:37:36 - src.reports - reports.py - spending_by_category - INFO - Определение начальной даты
+23.01.2025 18:37:36 - src.reports - reports.py - spending_by_category - INFO - Фильтрация данных по дате
+23.01.2025 18:37:36 - src.reports - reports.py - spending_by_category - INFO - Фильтрация данных по категории
+23.01.2025 18:37:36 - src.reports - reports.py - spending_by_category - INFO - Конец формирования отчета
+23.01.2025 18:37:36 - src.reports - reports.py - wrapper - INFO - Выгрузка отчета в файл report.json
+23.01.2025 18:37:36 - src.reports - reports.py - wrapper - INFO - Выгрузка отчета в файл test.txt

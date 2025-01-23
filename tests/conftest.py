@@ -45,18 +45,6 @@ def res_spending_by_category() -> pd.DataFrame:
     return data
 
 
-@pytest.fixture
-def res_spending_by_category_without_date() -> pd.DataFrame:
-    data = pd.DataFrame({"Категория": ["Супермаркеты"],
-                         "Дата операции": ["27.07.2024 16:44:00"],
-                         "Сумма операции": [-6],
-                         "Кэшбэк": [50],
-                         "Номер карты": ["*3333"],
-                         "Описание": ["Операция 6"]},
-                        index=[5])
-    return data
-
-
 @pytest.fixture()
 def cashback_12() -> str:
     data = """{"Супермаркеты": 40, "Одежда": 20}"""

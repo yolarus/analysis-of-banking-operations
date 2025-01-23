@@ -21,3 +21,119 @@
 29.07.2024 00:28:59 - src.utils - utils.py - get_stock_rates - INFO - Начало работы функции get_stock_rates
 29.07.2024 00:29:02 - src.utils - utils.py - get_stock_rates - INFO - Конец работы функции get_stock_rates
 29.07.2024 00:29:02 - src.views - views.py - main - INFO - Конец работы
+23.01.2025 18:19:40 - src.views - views.py - main - INFO - Начало работы
+23.01.2025 18:19:40 - src.views - views.py - main - INFO - Приветствие
+23.01.2025 18:19:40 - src.utils - utils.py - greetings - INFO - Начало работы функции greetings
+23.01.2025 18:19:40 - src.utils - utils.py - greetings - INFO - Конец работы функции greetings
+23.01.2025 18:19:40 - src.views - views.py - main - INFO - Получение данных
+23.01.2025 18:19:40 - src.utils - utils.py - get_data_filter_by_date - INFO - Начало работы функции get_data_filter_by_date
+23.01.2025 18:19:40 - src.utils - utils.py - get_data_filter_by_date - INFO - Конец работы функции get_data_filter_by_date
+23.01.2025 18:19:40 - src.views - views.py - main - INFO - Получение статистики по картам
+23.01.2025 18:19:40 - src.utils - utils.py - get_cards_info - INFO - Начало работы функции get_cards_info
+23.01.2025 18:19:40 - src.utils - utils.py - get_cards_info - INFO - Конец работы функции get_cards_info
+23.01.2025 18:19:40 - src.views - views.py - main - INFO - Получение топ транзаций
+23.01.2025 18:19:40 - src.utils - utils.py - get_top_transactions - INFO - Начало работы функции get_top_transactions
+23.01.2025 18:19:40 - src.utils - utils.py - get_top_transactions - INFO - Конец работы функции get_top_transactions
+23.01.2025 18:19:40 - src.views - views.py - main - INFO - Получение пользовательских настроек
+23.01.2025 18:19:40 - src.utils - utils.py - open_user_settings - INFO - Начало работы функции open_user_settings
+23.01.2025 18:19:40 - src.utils - utils.py - open_user_settings - INFO - Конец работы функции open_user_settings
+23.01.2025 18:19:40 - src.views - views.py - main - INFO - Получение данных курса валют
+23.01.2025 18:19:40 - src.utils - utils.py - get_exchange_rates - INFO - Начало работы функции get_exchange_rates
+23.01.2025 18:19:41 - src.utils - utils.py - get_exchange_rates - INFO - Конец работы функции get_exchange_rates
+23.01.2025 18:19:41 - src.views - views.py - main - INFO - Получение данных курса акций
+23.01.2025 18:19:41 - src.utils - utils.py - get_stock_rates - INFO - Начало работы функции get_stock_rates
+23.01.2025 18:19:45 - src.utils - utils.py - get_stock_rates - INFO - Конец работы функции get_stock_rates
+23.01.2025 18:19:45 - src.views - views.py - main - INFO - Конец работы
+23.01.2025 18:33:32 - src.utils - utils.py - get_data_filter_by_date - INFO - Начало работы функции get_data_filter_by_date
+23.01.2025 18:33:32 - src.utils - utils.py - get_data_filter_by_date - INFO - Конец работы функции get_data_filter_by_date
+23.01.2025 18:33:32 - src.utils - utils.py - get_cards_info - INFO - Начало работы функции get_cards_info
+23.01.2025 18:33:32 - src.utils - utils.py - get_cards_info - INFO - Конец работы функции get_cards_info
+23.01.2025 18:33:32 - src.utils - utils.py - get_top_transactions - INFO - Начало работы функции get_top_transactions
+23.01.2025 18:33:32 - src.utils - utils.py - get_top_transactions - INFO - Конец работы функции get_top_transactions
+23.01.2025 18:33:32 - src.utils - utils.py - get_exchange_rates - INFO - Начало работы функции get_exchange_rates
+23.01.2025 18:33:32 - src.utils - utils.py - get_exchange_rates - INFO - Конец работы функции get_exchange_rates
+23.01.2025 18:33:32 - src.utils - utils.py - get_stock_rates - INFO - Начало работы функции get_stock_rates
+23.01.2025 18:33:32 - src.utils - utils.py - get_stock_rates - INFO - Конец работы функции get_stock_rates
+23.01.2025 18:33:32 - src.utils - utils.py - open_user_settings - INFO - Начало работы функции open_user_settings
+23.01.2025 18:33:32 - src.utils - utils.py - open_user_settings - INFO - Конец работы функции open_user_settings
+23.01.2025 18:33:32 - src.utils - utils.py - greetings - INFO - Начало работы функции greetings
+23.01.2025 18:33:32 - src.utils - utils.py - greetings - INFO - Конец работы функции greetings
+23.01.2025 18:33:32 - src.utils - utils.py - greetings - INFO - Начало работы функции greetings
+23.01.2025 18:33:32 - src.utils - utils.py - greetings - INFO - Конец работы функции greetings
+23.01.2025 18:33:32 - src.utils - utils.py - greetings - INFO - Начало работы функции greetings
+23.01.2025 18:33:32 - src.utils - utils.py - greetings - INFO - Конец работы функции greetings
+23.01.2025 18:33:32 - src.utils - utils.py - greetings - INFO - Начало работы функции greetings
+23.01.2025 18:33:32 - src.utils - utils.py - greetings - INFO - Конец работы функции greetings
+23.01.2025 18:33:32 - src.views - views.py - main - INFO - Начало работы
+23.01.2025 18:33:32 - src.views - views.py - main - INFO - Приветствие
+23.01.2025 18:33:32 - src.utils - utils.py - greetings - INFO - Начало работы функции greetings
+23.01.2025 18:33:32 - src.utils - utils.py - greetings - INFO - Конец работы функции greetings
+23.01.2025 18:33:32 - src.views - views.py - main - INFO - Получение данных
+23.01.2025 18:33:32 - src.views - views.py - main - INFO - Получение статистики по картам
+23.01.2025 18:33:32 - src.utils - utils.py - get_cards_info - INFO - Начало работы функции get_cards_info
+23.01.2025 18:33:32 - src.utils - utils.py - get_cards_info - INFO - Конец работы функции get_cards_info
+23.01.2025 18:33:32 - src.views - views.py - main - INFO - Получение топ транзаций
+23.01.2025 18:33:32 - src.utils - utils.py - get_top_transactions - INFO - Начало работы функции get_top_transactions
+23.01.2025 18:33:32 - src.utils - utils.py - get_top_transactions - INFO - Конец работы функции get_top_transactions
+23.01.2025 18:33:32 - src.views - views.py - main - INFO - Получение пользовательских настроек
+23.01.2025 18:33:32 - src.views - views.py - main - INFO - Получение данных курса валют
+23.01.2025 18:33:32 - src.views - views.py - main - INFO - Получение данных курса акций
+23.01.2025 18:33:32 - src.views - views.py - main - INFO - Конец работы
+23.01.2025 18:36:32 - src.views - views.py - main - INFO - Начало работы
+23.01.2025 18:36:32 - src.views - views.py - main - INFO - Приветствие
+23.01.2025 18:36:32 - src.utils - utils.py - greetings - INFO - Начало работы функции greetings
+23.01.2025 18:36:32 - src.utils - utils.py - greetings - INFO - Конец работы функции greetings
+23.01.2025 18:36:32 - src.views - views.py - main - INFO - Получение данных
+23.01.2025 18:36:32 - src.utils - utils.py - get_data_filter_by_date - INFO - Начало работы функции get_data_filter_by_date
+23.01.2025 18:36:32 - src.utils - utils.py - get_data_filter_by_date - INFO - Конец работы функции get_data_filter_by_date
+23.01.2025 18:36:32 - src.views - views.py - main - INFO - Получение статистики по картам
+23.01.2025 18:36:32 - src.utils - utils.py - get_cards_info - INFO - Начало работы функции get_cards_info
+23.01.2025 18:36:32 - src.utils - utils.py - get_cards_info - INFO - Конец работы функции get_cards_info
+23.01.2025 18:36:32 - src.views - views.py - main - INFO - Получение топ транзаций
+23.01.2025 18:36:32 - src.utils - utils.py - get_top_transactions - INFO - Начало работы функции get_top_transactions
+23.01.2025 18:36:32 - src.utils - utils.py - get_top_transactions - INFO - Конец работы функции get_top_transactions
+23.01.2025 18:36:32 - src.views - views.py - main - INFO - Получение пользовательских настроек
+23.01.2025 18:36:32 - src.utils - utils.py - open_user_settings - INFO - Начало работы функции open_user_settings
+23.01.2025 18:36:32 - src.utils - utils.py - open_user_settings - INFO - Конец работы функции open_user_settings
+23.01.2025 18:36:32 - src.views - views.py - main - INFO - Получение данных курса валют
+23.01.2025 18:36:32 - src.utils - utils.py - get_exchange_rates - INFO - Начало работы функции get_exchange_rates
+23.01.2025 18:36:51 - src.utils - utils.py - get_exchange_rates - INFO - Конец работы функции get_exchange_rates
+23.01.2025 18:36:51 - src.views - views.py - main - INFO - Получение данных курса акций
+23.01.2025 18:36:51 - src.utils - utils.py - get_stock_rates - INFO - Начало работы функции get_stock_rates
+23.01.2025 18:36:56 - src.utils - utils.py - get_stock_rates - INFO - Конец работы функции get_stock_rates
+23.01.2025 18:36:56 - src.views - views.py - main - INFO - Конец работы
+23.01.2025 18:37:36 - src.utils - utils.py - get_data_filter_by_date - INFO - Начало работы функции get_data_filter_by_date
+23.01.2025 18:37:36 - src.utils - utils.py - get_data_filter_by_date - INFO - Конец работы функции get_data_filter_by_date
+23.01.2025 18:37:36 - src.utils - utils.py - get_cards_info - INFO - Начало работы функции get_cards_info
+23.01.2025 18:37:36 - src.utils - utils.py - get_cards_info - INFO - Конец работы функции get_cards_info
+23.01.2025 18:37:36 - src.utils - utils.py - get_top_transactions - INFO - Начало работы функции get_top_transactions
+23.01.2025 18:37:36 - src.utils - utils.py - get_top_transactions - INFO - Конец работы функции get_top_transactions
+23.01.2025 18:37:36 - src.utils - utils.py - get_exchange_rates - INFO - Начало работы функции get_exchange_rates
+23.01.2025 18:37:36 - src.utils - utils.py - get_exchange_rates - INFO - Конец работы функции get_exchange_rates
+23.01.2025 18:37:36 - src.utils - utils.py - get_stock_rates - INFO - Начало работы функции get_stock_rates
+23.01.2025 18:37:36 - src.utils - utils.py - get_stock_rates - INFO - Конец работы функции get_stock_rates
+23.01.2025 18:37:36 - src.utils - utils.py - open_user_settings - INFO - Начало работы функции open_user_settings
+23.01.2025 18:37:36 - src.utils - utils.py - open_user_settings - INFO - Конец работы функции open_user_settings
+23.01.2025 18:37:36 - src.utils - utils.py - greetings - INFO - Начало работы функции greetings
+23.01.2025 18:37:36 - src.utils - utils.py - greetings - INFO - Конец работы функции greetings
+23.01.2025 18:37:36 - src.utils - utils.py - greetings - INFO - Начало работы функции greetings
+23.01.2025 18:37:36 - src.utils - utils.py - greetings - INFO - Конец работы функции greetings
+23.01.2025 18:37:36 - src.utils - utils.py - greetings - INFO - Начало работы функции greetings
+23.01.2025 18:37:36 - src.utils - utils.py - greetings - INFO - Конец работы функции greetings
+23.01.2025 18:37:36 - src.utils - utils.py - greetings - INFO - Начало работы функции greetings
+23.01.2025 18:37:36 - src.utils - utils.py - greetings - INFO - Конец работы функции greetings
+23.01.2025 18:37:36 - src.views - views.py - main - INFO - Начало работы
+23.01.2025 18:37:36 - src.views - views.py - main - INFO - Приветствие
+23.01.2025 18:37:36 - src.utils - utils.py - greetings - INFO - Начало работы функции greetings
+23.01.2025 18:37:36 - src.utils - utils.py - greetings - INFO - Конец работы функции greetings
+23.01.2025 18:37:36 - src.views - views.py - main - INFO - Получение данных
+23.01.2025 18:37:36 - src.views - views.py - main - INFO - Получение статистики по картам
+23.01.2025 18:37:36 - src.utils - utils.py - get_cards_info - INFO - Начало работы функции get_cards_info
+23.01.2025 18:37:36 - src.utils - utils.py - get_cards_info - INFO - Конец работы функции get_cards_info
+23.01.2025 18:37:36 - src.views - views.py - main - INFO - Получение топ транзаций
+23.01.2025 18:37:36 - src.utils - utils.py - get_top_transactions - INFO - Начало работы функции get_top_transactions
+23.01.2025 18:37:36 - src.utils - utils.py - get_top_transactions - INFO - Конец работы функции get_top_transactions
+23.01.2025 18:37:36 - src.views - views.py - main - INFO - Получение пользовательских настроек
+23.01.2025 18:37:36 - src.views - views.py - main - INFO - Получение данных курса валют
+23.01.2025 18:37:36 - src.views - views.py - main - INFO - Получение данных курса акций
+23.01.2025 18:37:36 - src.views - views.py - main - INFO - Конец работы

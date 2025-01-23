@@ -10,14 +10,8 @@ def test_spending_by_category(transactions_df: pd.DataFrame,
     assert result.equals(res_spending_by_category)
 
 
-def test_spending_by_category_without_date(transactions_df: pd.DataFrame,
-                                           res_spending_by_category_without_date: pd.DataFrame) -> None:
-    result = spending_by_category.__wrapped__.__wrapped__(transactions_df, "Супермаркеты")
-    assert result. equals(res_spending_by_category_without_date)
-
-
 def test_spending_by_category_empty(transactions_df: pd.DataFrame) -> None:
-    result = spending_by_category.__wrapped__.__wrapped__(transactions_df, "Супермаркеты", "2025.03.01")
+    result = spending_by_category.__wrapped__.__wrapped__(transactions_df, "Супермаркеты")
     assert result.empty
 
 
